@@ -1,0 +1,14 @@
+﻿.venv/
+venv/
+*.flac
+*.zip
+data/*.csv
+data/prepared/
+data_raw/
+local_ukdale/
+spark_events/
+spark-warehouse/
+metastore_db/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

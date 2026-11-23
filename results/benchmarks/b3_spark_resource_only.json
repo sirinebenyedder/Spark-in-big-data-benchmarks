@@ -1,0 +1,19 @@
+{
+  "code": "B3",
+  "nom": "PySpark Dimensionnement Ressources Seules",
+  "type": "PySpark Resource-Only",
+  "nodes_p": 8,
+  "partitions_P": 64,
+  "aqe": true,
+  "duration_s": 14.3898,
+  "speedup_S": 0.0065,
+  "efficiency_E": 0.08,
+  "cost_node_s": 115.1181,
+  "cost_node_min": 1.9186,
+  "deadline_s": 180.0,
+  "respect_delai": true,
+  "recorded_at_utc": "2026-11-20T18:45:55.326593+00:00",
+  "details": {
+    "hourly_groups": 4416
+  }
+}

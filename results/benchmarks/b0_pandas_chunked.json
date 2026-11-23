@@ -1,0 +1,23 @@
+{
+  "code": "B0",
+  "nom": "Python NumPy/pandas Chunked",
+  "type": "Local Python",
+  "nodes_p": 1,
+  "partitions_P": 1,
+  "aqe": false,
+  "duration_s": 0.0932,
+  "speedup_S": 1.0,
+  "efficiency_E": 100.0,
+  "cost_node_s": 0.0932,
+  "cost_node_min": 0.0016,
+  "deadline_s": 180.0,
+  "respect_delai": true,
+  "recorded_at_utc": "2026-11-20T18:44:50.857736+00:00",
+  "details": {
+    "chunk_rows": 250000,
+    "total_rows": 1516948,
+    "avg_tp2": 1.3678,
+    "max_tp3": 10.302,
+    "avg_motor_current": 2.0502
+  }
+}

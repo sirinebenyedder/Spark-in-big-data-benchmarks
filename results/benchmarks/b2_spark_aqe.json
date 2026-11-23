@@ -1,0 +1,19 @@
+{
+  "code": "B2",
+  "nom": "PySpark Configuration Fixe + AQE",
+  "type": "PySpark Operational",
+  "nodes_p": 4,
+  "partitions_P": 64,
+  "aqe": true,
+  "duration_s": 13.3942,
+  "speedup_S": 0.007,
+  "efficiency_E": 0.17,
+  "cost_node_s": 53.5766,
+  "cost_node_min": 0.8929,
+  "deadline_s": 180.0,
+  "respect_delai": true,
+  "recorded_at_utc": "2026-11-20T18:45:28.634521+00:00",
+  "details": {
+    "hourly_groups": 4416
+  }
+}
