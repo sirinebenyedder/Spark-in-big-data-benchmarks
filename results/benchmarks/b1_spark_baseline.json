@@ -1,18 +1,18 @@
 {
   "code": "B1",
-  "nom": "PySpark Mono-n\u0153ud",
+  "nom": "PySpark Mono-n\u0153ud (5min)",
   "type": "PySpark Baseline",
   "nodes_p": 1,
   "partitions_P": 16,
   "aqe": false,
-  "duration_s": 5.5704,
-  "speedup_S": 0.0167,
-  "efficiency_E": 1.67,
-  "cost_node_s": 5.5704,
-  "cost_node_min": 0.0928,
+  "duration_s": 5.3255,
+  "speedup_S": 0.0027,
+  "efficiency_E": 0.27,
+  "cost_node_s": 5.3255,
+  "cost_node_min": 0.0888,
   "deadline_s": 180.0,
   "respect_delai": true,
-  "recorded_at_utc": "2026-11-20T18:45:03.336347+00:00",
+  "recorded_at_utc": "2026-11-27T20:25:53.245473+00:00",
   "details": {
     "hourly_groups": 4416
   }

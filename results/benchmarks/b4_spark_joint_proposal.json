@@ -1,19 +1,27 @@
 {
   "code": "B4",
-  "nom": "PySpark Choix Conjoint (Flora/M2DSIR)",
-  "type": "PySpark Joint Proposal",
-  "nodes_p": 4,
-  "partitions_P": 128,
+  "nom": "PySpark Choix Conjoint Propos\u00e9 (Arbre de D\u00e9cision, 5min)",
+  "type": "PySpark Joint Proposal (DT)",
+  "nodes_p": 1,
+  "partitions_P": 16,
   "aqe": true,
-  "duration_s": 25.1963,
-  "speedup_S": 0.0037,
-  "efficiency_E": 0.09,
-  "cost_node_s": 100.7854,
-  "cost_node_min": 1.6798,
+  "duration_s": 4.8837,
+  "speedup_S": 0.0029,
+  "efficiency_E": 0.29,
+  "cost_node_s": 4.8837,
+  "cost_node_min": 0.0814,
   "deadline_s": 180.0,
   "respect_delai": true,
-  "recorded_at_utc": "2026-11-20T18:46:32.270688+00:00",
+  "recorded_at_utc": "2026-11-27T20:26:55.354067+00:00",
   "details": {
-    "hourly_groups": 4416
+    "hourly_groups": 4416,
+    "decision_tree": {
+      "selected_nodes_p": 1,
+      "selected_partitions_P": 16,
+      "pred_T_s": 5.3255,
+      "pred_cost_min": 0.0888,
+      "safe_deadline_s": 162.0,
+      "train_samples": 3
+    }
   }
 }

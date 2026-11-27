@@ -33,17 +33,26 @@ def run_b1() -> None:
         t0 = time.perf_counter()
         df = (
             spark.read.parquet(str(PARQUET_PATH))
-            .select("equipment_id", "event_ts", "TP2", "TP3", "Oil_temperature", "Motor_current")
+            .select(
+                "equipment_id",
+                "win_start",
+                "n_obs",
+                "TP2_mean_5m",
+                "TP3_mean_5m",
+                "Oil_temperature_mean_5m",
+                "Motor_current_mean_5m",
+            )
             .repartition(partitions_p)
         )
         agg_df = (
-            df.withColumn("hour_ts", F.date_trunc("hour", F.col("event_ts")))
+            df.withColumn("hour_ts", F.date_trunc("hour", F.col("win_start")))
             .groupBy("equipment_id", "hour_ts")
             .agg(
-                F.count("*").alias("samples"),
-                F.avg("TP2").alias("avg_tp2"),
-                F.max("TP3").alias("max_tp3"),
-                F.avg("Motor_current").alias("avg_motor_current"),
+                F.count("*").alias("windows_5m"),
+                F.sum("n_obs").alias("samples"),
+                (F.sum(F.col("TP2_mean_5m") * F.col("n_obs")) / F.sum("n_obs")).alias("avg_tp2"),
+                F.max("TP3_mean_5m").alias("max_tp3"),
+                (F.sum(F.col("Motor_current_mean_5m") * F.col("n_obs")) / F.sum("n_obs")).alias("avg_motor_current"),
             )
         )
         row_count = agg_df.count()
@@ -52,7 +61,7 @@ def run_b1() -> None:
         b0_s = _get_b0_duration()
         metrics = build_summary_metrics(
             code="B1",
-            nom="PySpark Mono-nœud",
+            nom="PySpark Mono-nœud (5min)",
             type_exec="PySpark Baseline",
             nodes_p=nodes_p,
             partitions_p=partitions_p,
